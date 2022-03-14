@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:ital,wght@0,300;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+:root{
+    --important: rgb(3, 25, 47);
+    --bg: rgb(7, 35, 64);
+    --main-color: rgb(235, 230, 208);
+    --border: .2rem solid rgb(3, 141, 139);
+}
+html::-webkit-scrollbar{
+    inline-size: .8rem;
+    color: var(--main-color);
+}
+html::-webkit-scrollbar-thumb{
+    background-color: var(--important);
+}
+html::-webkit-scrollbar-track{
+    background-color: var(--main-color);
+}
+*{
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: .018rem;
+}
+
+html{
+
+    font-size: 80%;
+    overflow-x: hidden;
+    scroll-padding-block-start: 5rem;
+    scroll-behavior: smooth;
+}
+body{
+    position: relative;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 0; margin: 0;
+    inline-size: 100vw;
+}
+
+header{
+    block-size: 6rem;
+    inline-size: auto;
+    top: 0; right: 0; left: 0;
+    background-color: var(--important);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 0 3rem;
+    position: fixed;
+    z-index: 10000;
+
+}
+header .logo{
+    font-size: 4rem;
+    color: var(--main-color);
+    font-family: 'Ubuntu', sans-serif;
+}
+header .nav-bar{
+    display: flex;
+    flex-wrap: nowrap;
+    position: absolute;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    inline-size: 50rem;
+    block-size: 6rem;
+}
+
+header .nav-bar a{
+    margin: 0 3rem;
+    padding: .4rem;
+    color: var(--main-color);
+    text-decoration: none;
+    font-size: 1.6rem;
+
+}
+
+header .nav-bar a:hover{
+    border-bottom: var(--border);
+    color: rgb(3, 141, 139);
+}
+
+/* header .cornerBar connect-buttons{
+    inline-size: auto;
+    padding: .8rem;
+    background-color: magenta;
+    outline: none;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    block-size: 3rem;
+
+} */
+/* header .cornerBar button:hover{
+    color: var(--bg);
+} */
+
+.cornerBar{
+    display: flex;
+    inline-size: auto;
+    align-items: center;
+    justify-self: center
+}
+.cornerBar #search-btn{
+    font-size: 3rem;
+    color: var(--main-color);
+    margin: 0 .5rem;
+}
+
+/* FOR JS */
+
+.cornerBar #search-btn.inactive{
+    display: none;
+}
+
+/* FOR JS */
+
+.cornerBar #menu-bar, .cornerBar #close-bar{
+    font-size: 4rem;
+    color: var(--main-color);
+    display: none;
+    margin: 0 .5rem;
+}
+
+
+
+.cornerBar #menu-bar:hover, .cornerBar #search-btn:hover, .cornerBar #close-bar:hover{
+    background-color: rgb(3, 141, 139);
+    color: var(--important);
+    cursor:pointer;
+    border-radius: .8rem;
+}
+
+header .cornerBar .searchBar{
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: none;
+    block-size: 2.5rem;
+    inline-size: 25rem;
+    padding: .3rem;
+    display: none;
+    margin: 0 .8rem;
+}
+
+header .cornerBar .searchBar.active{
+    display: flex;
+}
+
+header .cornerBar .searchBar input{
+    border: none;
+    outline: none;
+    block-size: 2rem;
+    inline-size: 24rem;
+    font-size: 1.3rem;
+}
+
+header .cornerBar .searchBar #search-btn-real{
+    background-color: var(--important);
+    font-size: 2rem;
+    block-size: 2.3rem;
+    inline-size: 2.3rem;
+    background-color: rgb(3, 141, 139);
+    color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; margin: 0;
+}
+
+header .cornerBar .searchBar #search-btn-real:hover{
+    border-radius: 0rem;
+    background-color: rgb(3, 141, 139);
+    cursor: pointer;
+    color: var(--important);
+}
+.blog-page{
+    position: relative;
+    inline-size: 100vw;
+    block-size: auto;
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.blog-page .blog-skin{
+    block-size: auto;
+    display: grid;
+    grid-template-columns: 40rem 40rem;
+    margin: auto auto;
+    inline-size: 72vw;
+    gap: 10rem;
+}
+
+.blog-page .blog-skin .blog-section{
+    block-size: auto;
+    inline-size: 40rem;
+}
+.blog-page .blog-skin .blog-section img{
+    inline-size: 40rem;
+    
+}
+.blog-page .blog-skin .blog-section .topic{
+    font-size: 2rem;
+    color: var(--important);
+}
+
+.blog-page .blog-skin .blog-section .date{
+    font-size: .9rem;
+}
+
+.blog-page .blog-skin .blog-section .blog-post{
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+
+.blog-page .blog-skin .blog-section .read-more{
+    background-color: pink;
+    block-size: 2rem;
+    inline-size: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-page .page-count{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.blog-page .page-count .pages{
+    margin: 1rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+footer{
+    background-color: rgb(44, 43, 43);
+    block-size: 50vh;
+}
+
+
+@media (max-width:1280px) {
+
+    header{
+        margin: 0;
+        padding: 0 2rem;
+    }
+    header .nav-bar{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        position:absolute;
+        inline-size: 100vw;
+        block-size: 100vh;
+        background-color: var(--important);
+        padding: auto auto;
+        top: -100vh; right: 0; left: 0;
+        align-items: center;
+    }
+
+    header .nav-bar a{
+        padding: 2rem 1rem;
+        inline-size: 80vw;
+    }
+
+    header .nav-bar a:hover{
+        border: var(--border);
+    }
+
+    header .nav-bar.active{
+        top: 6rem;
+    }
+
+    .cornerBar #menu-bar{
+        display: flex;
+    }
+
+    .cornerBar #close-bar.active{
+        display: flex;
+    }
+    .cornerBar #search-btn{
+        padding: .5rem;
+    }
+
+    header .cornerBar .searchBar{
+        block-size: 3rem;
+        inline-size: 100vw;
+        z-index: 2000;
+        position: absolute;
+        top: 6rem;
+        right: 0; left: 0;
+    }
+    header .cornerBar .searchBar.active{
+        margin: 0;
+    }
+
+    header .cornerBar .searchBar input{
+        inline-size: 80vw;
+    }
+    
+    
+    header .cornerBar .searchBar #search-btn-real{
+        background-color: var(--important);
+        font-size: 3rem;
+        block-size: 3rem;
+        inline-size: 3rem;
+    }
+    
+}
