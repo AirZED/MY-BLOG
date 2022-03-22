@@ -760,6 +760,9 @@ footer{
         block-size: 3rem;
         inline-size: 3rem;
     }
+    .blog-page{
+        margin: auto;
+    }
 
     .blog-page .title{
         inline-size: 95%;
@@ -782,7 +785,6 @@ footer{
         inline-size: 100vw;
         margin: auto auto;
         gap: 5%;
-        border: var(--border);
         padding: 2%;
     }
     
@@ -812,12 +814,21 @@ footer{
 }
 
 @media (max-width:767px){
+    html{
+        zoom: 86%
+    }
+    body{
+        margin: auto;
+    }
     
+    
+    .blog-page{
+        margin: auto;
+    }
     .blog-page .blog-skin{
         grid-template-columns: 90%;
         inline-size: 90%;
         gap: 3rem;
-        border: var(--border);
     }
     
     .blog-page .blog-skin .blog-section{

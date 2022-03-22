@@ -122,8 +122,23 @@ const submitNewPostBtn = document.querySelector('#submitNewPostBtn');
 // WRITE NEW POST
 
 
-const topic = new Request('https://jsonplaceholder.typicode.com/');
 
-const text = topic.json;
+    var topic = document.querySelector('.topic').value;
+    var imageBlog = document.querySelector('#image1').value;
+    var blogPost = document.querySelector('.blog-post').value;
 
-console.log(text);
+    fetch('https://jsonplaceholder.typicode.com/todos/1',{
+        method: 'POST',
+            body: JSON.stringify({
+            title: topic,
+            body: blogPost
+        }),
+        headers:{
+            "Content-type": "application/json; UTF-8"
+        }
+    })
+    .then(response => response.json())
+    .then(json => {
+        console.log('response: ' + JSON.stringify(json));
+    })
+
