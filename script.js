@@ -1,5 +1,6 @@
-const menuBar = document.querySelector("#menu-bar");
-const closeBar = document.querySelector('#close-bar');
+// try {
+    const menuBar = document.querySelector("#menu-bar");
+    const closeBar = document.querySelector('#close-bar');
 
 //For Menu Bar Navigation
 const navBar = document.querySelector('.nav-bar');
@@ -11,100 +12,118 @@ const searchBar = document.querySelector('.searchBar');
 //For Search Filter
 const SearchFilter = document.querySelector('#search-btn-real');
 
-
 menuBar.addEventListener('click', swapToCloseBar);
 closeBar.addEventListener('click', swapToMenuBar);
 searchBtn.addEventListener('click', showSearchBar);
 SearchFilter.addEventListener('click', searchInDocument);
 
 
-function swapToCloseBar(e){
-    e.preventDefault();
-    menuBar.parentNode.replaceChild(closeBar, menuBar);
-    navBar.classList.add('active');
-    closeBar.classList.add('active');
-    
-    
-}
+    function swapToCloseBar(e){
+        e.preventDefault();
+        menuBar.parentNode.replaceChild(closeBar, menuBar);
+        navBar.classList.add('active');
+        closeBar.classList.add('active');
+        
+    }
 
-function swapToMenuBar(e){
-    e.preventDefault();
-    closeBar.parentNode.replaceChild(menuBar, closeBar)
-    navBar.classList.remove('active');
-}
+    function swapToMenuBar(e){
+        e.preventDefault();
+        closeBar.parentNode.replaceChild(menuBar, closeBar)
+        navBar.classList.remove('active');
+    }
 
-function showSearchBar(e){
-    e.preventDefault();
-    searchBar.classList.add('active');
-    searchBtn.classList.add('inactive');
-}
+    function showSearchBar(e){
+        e.preventDefault();
+        searchBar.classList.add('active');
+        searchBtn.classList.add('inactive');
+    }
 
-function searchInDocument(e){
-    e.preventDefault();
-    searchBtn.classList.remove('inactive');
-    searchBar.classList.remove('active');
-}
-
-
-//FOR COMMENTING
-const submitComment = document.querySelector('#submit-comment');
-const addComment = document.querySelector('#addComment');
-const commentBody = document.querySelector('.comment-body');
-const commentAndReply = document.querySelector('.comment-and-reply');
-const commentSection = document.querySelector('.comment-section');
-//FOR COMMENTING
+    function searchInDocument(e){
+        e.preventDefault();
+        searchBtn.classList.remove('inactive');
+        searchBar.classList.remove('active');
+    }
 
 
 //FOR COMMENTING
-submitComment.addEventListener('click', submitWrittenComment);
-//FOR COMMENTING
+
+const addPostBar = document.querySelector('#addPost-bar');
+const editSection = document.querySelector('.editSection');
+
+    addPostBar.addEventListener('click', showEditTab);
+
+        function showEditTab(){
+            editSection.classList.add('active');
+        }
 
 
-//FOR COMMENTING
-function submitWrittenComment(e){
-    e.preventDefault();
 
-    //create NEW comment-section div
+const closeEditSection = document.querySelector('#close-editSection');
 
+    closeEditSection.addEventListener('click', removeEditTab);
 
-            // let div = document.createElement("div")
-            // let p = document.createElement("p")
-            // div.append(p)
+        function removeEditTab(){
+            editSection.classList.remove('active');
+        }
 
 
-    //create commentBoxforReactions div
 
-    let newCommentBody = document.createElement('div');
-    newCommentBody.className='comment-body';
-
-    let newcommentsCommentSectionReal = document.createElement('div');
-    newcommentsCommentSectionReal.className ='comments-section-real';
-
-    let newCommentParent = document.createElement('div');
-    newCommentParent.className = 'commentBoxforReaction';
-
-    let newcommentAndReply = document.createElement('div');
-    newcommentAndReply.className = 'comment-and-reply';
-
-    
-
-    //create comments-section-real div
-
-    
-
-    //create new comment-and-reply
-    
-    newCommentBody.appendChild(document.createTextNode(addComment.value));
-    newcommentsCommentSectionReal.append(newCommentBody);
-    newCommentParent.append(newcommentsCommentSectionReal);
-    newcommentAndReply.append(newCommentParent);
-    
-    commentSection.appendChild(newcommentAndReply);
+// WRITE NEW POST
+const inputTopic = document.querySelector('#inputTopic');
+const inputImage = document.querySelector('#inputImage');
+const inputText = document.querySelector('#inputText');
 
 
-    
+const submitNewPostBtn = document.querySelector('#submitNewPostBtn');
 
-    //ADD TEXT NODE
+    submitNewPostBtn.addEventListener('click', submitNewPost);
 
-}
-//FOR COMMENTING
+        function submitNewPost(e){
+            e.preventDefault();
+            if (inputTopic.value == null){
+                    alert('Enter Topic')
+                }else if(inputImage.value == null){
+                    alert('Choose image')
+                }else if(inputText.value == null){
+                    alert('Input Text')
+                }else{
+                        
+                    
+
+                    const newBlogSection = document.createElement('div');
+                    newBlogSection.className = 'blog-section';
+
+                    const newImage = document.createElement('img');
+                    newImage.id = 'image1';
+
+                    const newTopic= document.createElement('h2')
+                    newTopic.className = 'topic';
+
+                    const newMetaData = document.createElement('div');
+                    newMetaData.className = 'metadata'
+
+                        const newDate = document.createElement('h4');
+                        newDate.className = 'date';
+
+                    const newBlogPost = document.createElement('p');
+                    newBlogPost.className = 'blog-post'
+
+                    const newFormatPost = document.createElement('div');
+                    newFormatPost.className = 'formatPOST';
+
+                        const newArticle = document.createElement('a');
+                        newArticle.target = '_blank';
+                        newArticle.tagName = 'a';
+
+                        
+                }
+        }
+
+// WRITE NEW POST
+
+
+const topic = new Request('https://jsonplaceholder.typicode.com/');
+
+const text = topic.json;
+
+console.log(text);

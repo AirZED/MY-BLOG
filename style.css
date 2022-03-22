@@ -132,10 +132,29 @@ header .nav-bar a:hover{
     margin: 0 .5rem;
 }
 
+.cornerBar #addPost-bar, #adminLogout, #adminLogin{
+    font-size: 3rem;
+    color: var(--main-color);
+    margin: 0 .5rem;
+}
+
+#close-editSection{
+    position: absolute;
+    right: 2rem;
+    top: 0rem;
+    padding: .7rem;
+    color: var(--important);
+    cursor: pointer;
+
+}
+
+#close-editSection:hover{
+    background-color: red;
+    color: white;
+}
 
 
-.cornerBar #menu-bar:hover, .cornerBar #search-btn:hover, .cornerBar #close-bar:hover{
-    background-color: rgb(3, 141, 139);
+.cornerBar #menu-bar:hover, .cornerBar #search-btn:hover, .cornerBar #close-bar:hover, .cornerBar #addPost-bar:hover, #adminLogout:hover, #adminLogin:hover{   background-color: rgb(3, 141, 139);
     color: var(--important);
     cursor:pointer;
     border-radius: .8rem;
@@ -244,7 +263,11 @@ header .cornerBar .searchBar #search-btn-real:hover{
     color: black;
 }
 
-.blog-page .blog-skin .blog-section .read-more{
+.blog-page .blog-skin .blog-section .formatPOST{
+    display: flex;
+}
+
+.blog-page .blog-skin .blog-section .formatPOST div{
     background-color: pink;
     block-size: 2rem;
     inline-size: 7rem;
@@ -252,10 +275,13 @@ header .cornerBar .searchBar #search-btn-real:hover{
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    font-weight: 600;
+    margin: .5rem;
+    padding: .4rem;
+    font-weight: 700;
+    color: rgb(37, 37, 37);
 }
 
-.blog-page .blog-skin .blog-section .read-more:hover{
+.blog-page .blog-skin .blog-section .formatPOST div:hover{
     color: var(--main-color);
     background-color: rgb(117, 72, 80);
 }
@@ -276,6 +302,7 @@ header .cornerBar .searchBar #search-btn-real:hover{
     align-items: center;
     justify-content: center;
     font-weight: 600;
+    cursor: pointer;
 
 }
 
@@ -467,18 +494,11 @@ footer{
 
 .comment-section .comment-and-reply .comments-section-real, .comment-section .comment-and-reply .reply{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
     gap: 1rem;
     padding: 1rem 1rem;
     inline-size: 60vw;
 }
-
-.comment-section .comment-and-reply .comments-section-real img, .reply img{
-    inline-size: 4rem;
-    border-radius: 50%;
-}
-
 .comment-section .comment-and-reply .reply{
     margin-left: 4rem;
     inline-size: 64.5vw;
@@ -503,16 +523,56 @@ footer{
     font-weight: 600;
 }
 
-.comment-section .drop-comment{
-    inline-size: 72vw;
-    block-size: auto;
+.dropcommentSection{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    inline-size: 72vw;
+    border-radius: 2rem;
+    background-color:rgb(238, 238, 238);
 }
 
-.comment-section .drop-comment textarea{
+.dropcommentSection h3{
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: var(--important);
+    padding: .5rem;
+    color: rgb(238, 238, 238);
+    border-radius: .2rem;
+}
+
+.dropcommentSection .drop-comment{
+    block-size: auto;
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 2rem 0;
+}
+
+
+.dropcommentSection .drop-comment label{
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.dropcommentSection .drop-comment input{
+    inline-size: 55vw;
+    margin: auto;
+    block-size: 2rem;
+    outline: none;
+    border: none;
+    border-bottom: var(--border);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.dropcommentSection .drop-comment input:hover{
+    background-color: #ccc;
+}
+
+.dropcommentSection textarea{
     padding: 2rem;
     background-color: #ccc;
     min-inline-size: 60vw;
@@ -526,7 +586,7 @@ footer{
     border-radius: 1rem;
 }
 
-.comment-section .drop-comment button{
+.dropcommentSection button{
     padding: .5rem;
     margin: 2rem 0;
     background-color: rgb(3, 25, 47);
@@ -541,7 +601,7 @@ footer{
 
 }
 
-.comment-section .drop-comment button:hover{
+.dropcommentSection button:hover{
     background-color: rgb(212, 77, 100);
     color: rgb(241, 240, 240);
 }
@@ -552,6 +612,85 @@ footer{
 
 
 /* ARTICLE SECTION */
+
+/* ADD POST */
+
+.blog-page .editSection{
+    padding: 2rem;
+    inline-size: 50vw;
+    block-size: auto;
+    position: fixed;
+    background-color: rgb(245, 245, 245);
+    border-radius: 1rem;
+    bottom: 0; right: -100%; top: 10rem;
+}
+
+.blog-page .editSection.active{
+    right: 0;
+}
+
+.blog-page .editSection div{
+    display: flex;
+    margin: 2rem 0;
+
+}
+.blog-page .editSection div label{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: .3rem;
+    white-space: nowrap;
+
+}
+
+.blog-page .editSection .inputTopic #inputTopic{
+    inline-size: 100%;
+    border: none;
+    outline: none;
+    block-size: 2rem;
+    border-bottom: var(--border);
+    background-color: #ccc;
+}
+
+.blog-page .editSection .inputImage{
+    display: flex;
+    align-items: center;
+}
+.blog-page .editSection .inputText{
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-page .editSection .inputText #inputText{
+    border:var(--border);
+    inline-size: 98%;
+    min-block-size: 46vh;
+}
+
+.blog-page .editSection button{
+    background-color: pink;
+    block-size: 2rem;
+    inline-size: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: .5rem;
+    padding: 1.2rem 1rem;
+    font-weight: 700;
+    color:rgb(37, 37, 37);
+    border-radius: .4rem;
+    border: none;
+    outline: none;
+}
+    
+.blog-page .editSection button:hover{
+    color: var(--main-color);
+    background-color: rgb(117, 72, 80);
+ }
+    
+
+/* ADD POST */
+
 
 
 
@@ -662,7 +801,7 @@ footer{
     }
     
     
-    .blog-page .blog-skin .blog-section a .read-more{
+    .blog-page .blog-skin .blog-section .formatPOST a .read-more, .blog-page .blog-skin .blog-section .formatPOST .editPost, .blog-page .blog-skin .blog-section .formatPOST .deletePost{
         block-size: 2.5rem;
     }
 
@@ -738,5 +877,9 @@ footer{
         border-radius: 2rem;
     }
 
+    .blog-page .editSection{
+        inline-size: 88vw;
+        border-radius: 0;
+    }
 
 }

@@ -28,6 +28,7 @@
                 </div>
             <span class="material-icons-outlined" id="menu-bar">menu</span>
             <span class="material-icons-outlined" id="close-bar">close</span>
+            <a href="admin.html" title="Admin Login"><span id="adminLogin"class="material-icons-outlined">login</span></a>
             <!-- <div class="connect-buttons">
 
             </div> -->
@@ -108,7 +109,7 @@
                 <div class="comment-and-reply">
                     <div id="commentBoxforReaction">
                         <div class="comments-section-real">
-                            <img src="./images/profile.jpg" alt="" class="commenter">
+                            <div class="userName">MFONISO</div>
                             <div class="comment-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                 Aliquam, molestiae voluptate. Quas odio inventore repudiandae corporis autem pariatur debitis dolore?
                             </div>
@@ -116,19 +117,19 @@
                         <div class="reactions">Like edit reply</div>
                     </div>
                     
-                    <div id="commentBoxforReaction">
+                    <!-- <div id="commentBoxforReaction">
                         <div class="reply">
-                            <img src="./images/profile.jpg" alt="" class="commenter">
+                            <div class ="userNameComment"> Samuel </div>
                             <div class="reply-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                 Aliquam, molestiae voluptate. Quas odio inventore repudiandae corporis autem pariatur debitis dolore?
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="comment-and-reply">
                     <div id="commentBoxforReaction">
                         <div class="comments-section-real">
-                            <img src="./images/profile.jpg" alt="" class="commenter">
+                            <div class="userName">MFONISO</div>
                             <div class="comment-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                 Aliquam, molestiae voluptate. Quas odio inventore repudiandae corporis autem pariatur debitis dolore?
                             </div>
@@ -136,14 +137,20 @@
                     </div>
                 </div>
                 
+            </div>
+            <div class="dropcommentSection">
 
-
-                <div class="drop-comment">
                     <h3>ADD COMMENT</h3>
-                    <textarea name="addComment" id="addComment">
-                    </textarea>
+                    
+                    <div class="drop-comment">
+                        <label for="userNameComment">Input Name:</label>
+                        <input type="text"  id='userNameComment' placeholder="Type name..." required>
+                    </div>
+
+                    <textarea name="addComment" id="addComment"></textarea>
+                   
                     <button id="submit-comment" >SUBMIT COMMENT</button>
-                </div>
+                
             </div>
         <!-- COMMENT SECTION -->
         
@@ -153,5 +160,6 @@
 
     </footer>
     <script src="script.js"></script>
+    <script src="article.js"></script>
 </body>
 </html>
