@@ -824,6 +824,7 @@ footer{
     
     .blog-page{
         margin: auto;
+        margin-top: 8rem;
     }
     .blog-page .blog-skin{
         grid-template-columns: 90%;
