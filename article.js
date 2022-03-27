@@ -18,7 +18,11 @@ function submitWrittenComment(e){
     e.preventDefault();
 
     //create NEW comment-section div
-
+    if ( userNameComment.value == false){
+        alert('Enter Name Please')
+    }else if(addComment.value == false){
+        alert('Please Enter Comment')
+        }else{
 
             // let div = document.createElement("div")
             // let p = document.createElement("p")
@@ -26,38 +30,38 @@ function submitWrittenComment(e){
 
 
     //create commentBoxforReactions div
-    let newUserName = document.createElement('div');
-    newUserName.className = 'userName';
+            let newUserName = document.createElement('div');
+            newUserName.className = 'userName';
 
-    let newCommentBody = document.createElement('div');
-    newCommentBody.className='comment-body';
+            let newCommentBody = document.createElement('div');
+            newCommentBody.className='comment-body';
 
-    let newcommentsCommentSectionReal = document.createElement('div');
-    newcommentsCommentSectionReal.className ='comments-section-real';
+            let newcommentsCommentSectionReal = document.createElement('div');
+            newcommentsCommentSectionReal.className ='comments-section-real';
 
-    let newCommentParent = document.createElement('div');
-    newCommentParent.className = 'commentBoxforReaction';
+            let newCommentParent = document.createElement('div');
+            newCommentParent.className = 'commentBoxforReaction';
 
-    let newcommentAndReply = document.createElement('div');
-    newcommentAndReply.className = 'comment-and-reply';
+            let newcommentAndReply = document.createElement('div');
+            newcommentAndReply.className = 'comment-and-reply';
 
-    //create comments
+            //create comments
 
-    newUserName.appendChild(document.createTextNode(userNameComment.value.toUpperCase()))
-    newCommentBody.appendChild(document.createTextNode(addComment.value));
+            newUserName.appendChild(document.createTextNode(userNameComment.value.toUpperCase()))
+            newCommentBody.appendChild(document.createTextNode(addComment.value));
+            
+            newcommentsCommentSectionReal.append(newUserName);
+            newcommentsCommentSectionReal.append(newCommentBody);
+            
+
+            newCommentParent.append(newcommentsCommentSectionReal);
+            newcommentAndReply.append(newCommentParent);
+            
+            commentSection.appendChild(newcommentAndReply);
+
+
     
-    newcommentsCommentSectionReal.append(newUserName);
-    newcommentsCommentSectionReal.append(newCommentBody);
-    
 
-    newCommentParent.append(newcommentsCommentSectionReal);
-    newcommentAndReply.append(newCommentParent);
-    
-    commentSection.appendChild(newcommentAndReply);
-
-
-    
-
-    //ADD TEXT NODE
+    }  //ADD TEXT NODE
 
 }

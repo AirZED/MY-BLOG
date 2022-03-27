@@ -814,14 +814,6 @@ footer{
 }
 
 @media (max-width:767px){
-    html{
-        zoom: 86%
-    }
-    body{
-        margin: auto;
-    }
-    
-    
     .blog-page{
         margin: auto;
         margin-top: 8rem;

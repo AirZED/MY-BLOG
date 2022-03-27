@@ -1,4 +1,28 @@
 // try {
+
+handleJSON;
+
+
+function handleJSON(e){
+
+    e.preventDefault();
+    
+fetch('https://jsonplaceholder.typicode.com/posts')
+.then ((response) => response.json())
+    .then((data) =>  console.log(JSON.parse(((data)[1].title))))
+   
+.catch((error) => console.error(error));
+
+const topic = document.querySelector('.topic');
+
+
+const something = JSON.Parse(json);
+console.log(something);
+
+}
+
+
+
     const menuBar = document.querySelector("#menu-bar");
     const closeBar = document.querySelector('#close-bar');
 
@@ -69,10 +93,12 @@ const closeEditSection = document.querySelector('#close-editSection');
 
 
 // WRITE NEW POST
-const inputTopic = document.querySelector('#inputTopic');
+
 const inputImage = document.querySelector('#inputImage');
 const inputText = document.querySelector('#inputText');
 
+const blogPage = document.querySelector('.blog-page');
+const formatPOST = document.querySelector('.formatPOST');
 
 const submitNewPostBtn = document.querySelector('#submitNewPostBtn');
 
@@ -80,11 +106,11 @@ const submitNewPostBtn = document.querySelector('#submitNewPostBtn');
 
         function submitNewPost(e){
             e.preventDefault();
-            if (inputTopic.value == null){
+            if (inputTopic.value == false){
                     alert('Enter Topic')
-                }else if(inputImage.value == null){
+                }else if(inputImage.value ==false){
                     alert('Choose image')
-                }else if(inputText.value == null){
+                }else if(inputText.value ==false){
                     alert('Input Text')
                 }else{
                         
@@ -93,8 +119,9 @@ const submitNewPostBtn = document.querySelector('#submitNewPostBtn');
                     const newBlogSection = document.createElement('div');
                     newBlogSection.className = 'blog-section';
 
-                    const newImage = document.createElement('img');
-                    newImage.id = 'image1';
+                    const inputTopic = document.querySelector('#inputTopic');
+                        const newImage = document.createElement('img');
+                        newImage.id = 'image1';
 
                     const newTopic= document.createElement('h2')
                     newTopic.className = 'topic';
@@ -108,14 +135,47 @@ const submitNewPostBtn = document.querySelector('#submitNewPostBtn');
                     const newBlogPost = document.createElement('p');
                     newBlogPost.className = 'blog-post'
 
-                    const newFormatPost = document.createElement('div');
-                    newFormatPost.className = 'formatPOST';
+                    // const newFormatPost = document.createElement('div');
+                    // newFormatPost.className = 'formatPOST';
 
-                        const newArticle = document.createElement('a');
-                        newArticle.target = '_blank';
-                        newArticle.tagName = 'a';
+                    //     const newArticle = document.createElement('a');
+                    //     newArticle.target = '_blank';
+                    //     newArticle.tagName = 'a';
 
-                        
+                    // const newEditPost = document.createElement('div');
+                    // newEditPost.className = 'editPost';
+
+                    // const newDeletePost = document.createElement('div')
+                    // newDeletePost.className = 'deletePost'
+
+
+                    //NODES
+
+                // newFormatPost.append(newArticle);
+                // newFormatPost.append(newEditPost);
+                // newFormatPost.append(newDeletePost);
+
+               
+
+               
+                newBlogSection.append(newMetaData)
+                        newMetaData.append(newDate);
+
+                newBlogSection.append(newTopic);
+                newBlogSection.append(newImage);
+
+                newBlogPost.appendChild(document.createTextNode(inputText.value));
+                newImage.appendChild(inputImage);
+                newTopic.appendChild(document.createTextNode(inputTopic.value));
+                
+                newBlogSection.append(newBlogPost);
+                newBlogSection.append(formatPOST);
+                
+                blogPage.appendChild(newBlogSection);
+
+                console.log(newImage.src)
+
+                
                 }
         }
 
@@ -123,22 +183,11 @@ const submitNewPostBtn = document.querySelector('#submitNewPostBtn');
 
 
 
-    var topic = document.querySelector('.topic').value;
-    var imageBlog = document.querySelector('#image1').value;
-    var blogPost = document.querySelector('.blog-post').value;
+    // var topic = document.querySelector('.topic').value;
+    // var imageBlog = document.querySelector('#image1').value;
+    // var blogPost = document.querySelector('.blog-post').value;
 
-    fetch('https://jsonplaceholder.typicode.com/todos/1',{
-        method: 'POST',
-            body: JSON.stringify({
-            title: topic,
-            body: blogPost
-        }),
-        headers:{
-            "Content-type": "application/json; UTF-8"
-        }
-    })
-    .then(response => response.json())
-    .then(json => {
-        console.log('response: ' + JSON.stringify(json));
-    })
+    
+   
+
 
