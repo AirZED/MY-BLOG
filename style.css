@@ -616,17 +616,18 @@ footer{
 /* ADD POST */
 
 .blog-page .editSection{
+    display: none;
     padding: 2rem;
     inline-size: 50vw;
     block-size: auto;
     position: fixed;
     background-color: rgb(245, 245, 245);
     border-radius: 1rem;
-    bottom: 0; right: -100%; top: 10rem;
+    bottom: 0; right: 0; top: 10rem;
 }
 
 .blog-page .editSection.active{
-    right: 0;
+   display: block;
 }
 
 .blog-page .editSection div{
@@ -746,7 +747,8 @@ footer{
         right: 0; left: 0;
     }
     header .cornerBar .searchBar.active{
-        margin: 0;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     header .cornerBar .searchBar input{
@@ -759,9 +761,6 @@ footer{
         font-size: 3rem;
         block-size: 3rem;
         inline-size: 3rem;
-    }
-    .blog-page{
-        margin: auto;
     }
 
     .blog-page .title{

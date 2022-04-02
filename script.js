@@ -1,4 +1,6 @@
-// try {
+try {
+    "use strict";
+
 
 handleJSON;
 
@@ -97,12 +99,14 @@ const closeEditSection = document.querySelector('#close-editSection');
 const inputImage = document.querySelector('#inputImage');
 const inputText = document.querySelector('#inputText');
 
-const blogPage = document.querySelector('.blog-page');
+const blogSkin = document.querySelector('.blog-skin');
 const formatPOST = document.querySelector('.formatPOST');
 
 const submitNewPostBtn = document.querySelector('#submitNewPostBtn');
 
     submitNewPostBtn.addEventListener('click', submitNewPost);
+    
+    // inputImage.addEventListener('change', showImage);
 
         function submitNewPost(e){
             e.preventDefault();
@@ -115,79 +119,68 @@ const submitNewPostBtn = document.querySelector('#submitNewPostBtn');
                 }else{
                         
                     
-
                     const newBlogSection = document.createElement('div');
                     newBlogSection.className = 'blog-section';
-
-                    const inputTopic = document.querySelector('#inputTopic');
-                        const newImage = document.createElement('img');
+                      
+                        //The files in the DOM are accessible with the keyword file, hence input ID.files access all the files inside the DOM
+                        //and specifying the latest file uses a syntax similar to getting objects from arrays. file[0]
+                        //URL.createObjectURL(file[0]) was used to create a URL for the file in the DOM, and it was assigned to the src attribute of the file
+                        //hence upload.
+                        
+                    var file = inputImage.files
+                    //    RE-Defining new image source
+                    
+                    var newImageSrc = URL.createObjectURL(file[0]);
+                        
+                    var newImage = document.createElement('img');
                         newImage.id = 'image1';
+                        newImage.setAttribute('src', newImageSrc);
+
+                                        
 
                     const newTopic= document.createElement('h2')
-                    newTopic.className = 'topic';
+                        newTopic.className = 'topic';
 
                     const newMetaData = document.createElement('div');
-                    newMetaData.className = 'metadata'
+                        newMetaData.className = 'metadata'
 
-                        const newDate = document.createElement('h4');
+                    const newDate = document.createElement('h4');
                         newDate.className = 'date';
+                    const freshDates = new Date();
+                    const dateStructure =  freshDates.toDateString();
+                        newDate.appendChild(document.createTextNode(dateStructure));
 
                     const newBlogPost = document.createElement('p');
-                    newBlogPost.className = 'blog-post'
-
-                    // const newFormatPost = document.createElement('div');
-                    // newFormatPost.className = 'formatPOST';
-
-                    //     const newArticle = document.createElement('a');
-                    //     newArticle.target = '_blank';
-                    //     newArticle.tagName = 'a';
-
-                    // const newEditPost = document.createElement('div');
-                    // newEditPost.className = 'editPost';
-
-                    // const newDeletePost = document.createElement('div')
-                    // newDeletePost.className = 'deletePost'
-
-
-                    //NODES
-
-                // newFormatPost.append(newArticle);
-                // newFormatPost.append(newEditPost);
-                // newFormatPost.append(newDeletePost);
+                    newBlogPost.className = 'blog-post';         
 
                
-
-               
+                newBlogSection.append(newImage);
                 newBlogSection.append(newMetaData)
                         newMetaData.append(newDate);
 
-                newBlogSection.append(newTopic);
-                newBlogSection.append(newImage);
-
                 newBlogPost.appendChild(document.createTextNode(inputText.value));
-                newImage.appendChild(inputImage);
                 newTopic.appendChild(document.createTextNode(inputTopic.value));
                 
                 newBlogSection.append(newBlogPost);
                 newBlogSection.append(formatPOST);
                 
-                blogPage.appendChild(newBlogSection);
+                blogSkin.appendChild(newBlogSection);
 
-                console.log(newImage.src)
-
-                
-                }
+            }
         }
 
-// WRITE NEW POST
 
+    // the throw creates custom errors for various examples e.g
 
-
-    // var topic = document.querySelector('.topic').value;
-    // var imageBlog = document.querySelector('#image1').value;
-    // var blogPost = document.querySelector('.blog-post').value;
-
+    // if(x<5) throw "Greater";
     
+} catch (error) {
+    console.log(error);
+}
+
+finally{
+   alert('Chargers Alert')
+}
    
 
 

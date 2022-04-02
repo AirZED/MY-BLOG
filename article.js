@@ -1,3 +1,5 @@
+"use strict";
+
 const userNameComment = document.querySelector('#userNameComment');
 const userName = document.querySelector('.userName');
 const submitComment = document.querySelector('#submit-comment');
