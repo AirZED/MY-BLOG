@@ -1,130 +1,419 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mfoniso Blog</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <div class="logo">MS</div>
-        <div class="nav-bar">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Resources</a>
-            <a href="https://mfonisoukpabio.vercel.app/">Portfolio</a>
-        </div>
-        
-        <div class="cornerBar">
-                <span class="material-icons-outlined" id="search-btn">search</span>
-                <div class="searchBar">
-                    <input type="text" placeholder="Search Blog...">
-                    <span class="material-icons-outlined" id="search-btn-real">search</span>
-                </div>
-            <span class="material-icons-outlined" id="menu-bar">menu</span>
-            <span class="material-icons-outlined" id="close-bar">close</span>
-            <a href="admin.html" title="Admin Login"><span id="adminLogin"class="material-icons-outlined">login</span></a>
-            <!-- <div class="connect-buttons">
-
-            </div> -->
-            <!-- <button>GET STARTED</button> -->
-        </div>
-            
-    </header>
-    <section class="blog-page">
-        <h1 class="title">Educational Articles for your consumption</h1>
-        <p class="addiTitle">Read about new ideas concerning school, school resumption, etc</p>
-        <div class="blog-skin">
-            <div class="blog-section">
-                <img src="./images/BMW.jpg" id='image1' alt="BMW CAR">
-                <h2 class="topic" id="topic">Marketing</h2>
-                <div class="metadata"><h4 class="date">5th March 2022</h4></div>
-                <p class="blog-post" id="blog-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Consectetur voluptas corrupti incidunt, atque quo aliquid repellendus est 
-                    saepe error esse laborum, ipsa cumque, quasi fugiat? Consequatur voluptas maxime 
-                    laboriosam, totam nulla dolorum corrupti non quia vitae quae, cumque, architecto deleniti. 
-                    Maiores recusandae sit unde impedit eos accusamus. Aspernatur assumenda libero necessitatibus 
-                    neque nostrum qui architecto unde ipsa tempore pariatur fugit eum voluptatem cum porro nemo fugiat 
-                    aut quae, in deleniti odit perspiciatis atque ullam. Nemo culpa ratione tenetur temporibus iusto? 
-                    Reprehenderit explicabo, omnis suscipit culpa soluta expedita qui unde adipisci nemo temporibus magni 
-                    quas quidem nesciunt provident, commodi iste magnam!</p>
-                    <div class="formatPOST">
-                        <a href="article.html" target="_blank""><div class="read-more">READ MORE</div></a>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mfoniso Blog</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    </head>
+    <body>
+            <div id="index-section">
+                <header>
+                    <div class="logo">MS</div>
+                    <div class="nav-bar">
+                        <a href="#">Home</a>
+                        <a href="#">About</a>
+                        <a href="#">Resources</a>
+                        <a href="https://mfonisoukpabio.vercel.app/">Portfolio</a>
                     </div>
-            </div>
-            <div class="blog-section">
-                <img src="./images/BMW.jpg" id='image1' alt="BMW CAR">
-                <h2 class="topic">Marketing</h2>
-                <div class="metadata"><h4 class="date">5th March 2022</h4></div>
-                <p class="blog-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Consectetur voluptas corrupti incidunt, atque quo aliquid repellendus est 
-                    saepe error esse laborum, ipsa cumque, quasi fugiat? Consequatur voluptas maxime 
-                    laboriosam, totam nulla dolorum corrupti non quia vitae quae, cumque, architecto deleniti. 
-                    Maiores recusandae sit unde impedit eos accusamus. Aspernatur assumenda libero necessitatibus 
-                    neque nostrum qui architecto unde ipsa tempore pariatur fugit eum voluptatem cum porro nemo fugiat 
-                    aut quae, in deleniti odit perspiciatis atque ullam. Nemo culpa ratione tenetur temporibus iusto? 
-                    Reprehenderit explicabo, omnis suscipit culpa soluta expedita qui unde adipisci nemo temporibus magni 
-                    quas quidem nesciunt provident, commodi iste magnam!</p>
-                    <div class="formatPOST">
-                        <a href="article.html" target="_blank""><div class="read-more">READ MORE</div></a>
+                    
+                    <div class="cornerBar">
+                            <span class="material-icons-outlined" id="search-btn">search</span>
+                            <div class="searchBar">
+                                <input type="text" placeholder="Search Blog...">
+                                <span class="material-icons-outlined" id="search-btn-real">search</span>
+                            </div>
+                        <span class="material-icons-outlined" id="menu-bar">menu</span>
+                        <span class="material-icons-outlined" id="close-bar">close</span>
+                        <span id="adminLogin"class="material-icons-outlined" title="Admin Login">login</span>
+                        <!-- <div class="connect-buttons">
+
+                        </div> -->
+                        <!-- <button>GET STARTED</button> -->
                     </div>
-            </div>
-            <div class="blog-section">
-                <img src="./images/BMW.jpg" id='image1' alt="BMW CAR">
-                <h2 class="topic">Marketing</h2>
-                <div class="metadata"><h4 class="date">5th March 2022</h4></div>
-                <p class="blog-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Consectetur voluptas corrupti incidunt, atque quo aliquid repellendus est 
-                    saepe error esse laborum, ipsa cumque, quasi fugiat? Consequatur voluptas maxime 
-                    laboriosam, totam nulla dolorum corrupti non quia vitae quae, cumque, architecto deleniti. 
-                    Maiores recusandae sit unde impedit eos accusamus. Aspernatur assumenda libero necessitatibus 
-                    neque nostrum qui architecto unde ipsa tempore pariatur fugit eum voluptatem cum porro nemo fugiat 
-                    aut quae, in deleniti odit perspiciatis atque ullam. Nemo culpa ratione tenetur temporibus iusto? 
-                    Reprehenderit explicabo, omnis suscipit culpa soluta expedita qui unde adipisci nemo temporibus magni 
-                    quas quidem nesciunt provident, commodi iste magnam!</p>
-                    <div class="formatPOST">
-                        <a href="article.html" target="_blank""><div class="read-more">READ MORE</div></a>
+                        
+                </header>
+                <section class="blog-page">
+                    <h1 class="title">Educational Articles for your consumption</h1>
+                    <p class="addiTitle">Read about new ideas concerning school, school resumption, etc</p>
+                    <div class="blog-skin">
+                        <div class="blog-section">
+                            <img src="./images/BMW.jpg" id='image1' alt="BMW CAR">
+                            <h2 class="topic" id="topic">Marketing</h2>
+                            <div class="metadata"><h4 class="date">5th March 2022</h4></div>
+                            <p class="blog-post" id="blog-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Consectetur voluptas corrupti incidunt, atque quo aliquid repellendus est 
+                                saepe error esse laborum, ipsa cumque, quasi fugiat? Consequatur voluptas maxime 
+                                laboriosam, totam nulla dolorum corrupti non quia vitae quae, cumque, architecto deleniti. 
+                                Maiores recusandae sit unde impedit eos accusamus. Aspernatur assumenda libero necessitatibus 
+                                neque nostrum qui architecto unde ipsa tempore pariatur fugit eum voluptatem cum porro nemo fugiat 
+                                aut quae, in deleniti odit perspiciatis atque ullam. Nemo culpa ratione tenetur temporibus iusto? 
+                                Reprehenderit explicabo, omnis suscipit culpa soluta expedita qui unde adipisci nemo temporibus magni 
+                                quas quidem nesciunt provident, commodi iste magnam!</p>
+                                <div class="formatPOST">
+                                    <a href="article.html" target="_blank""><div class="read-more">READ MORE</div></a>
+                                </div>
+                        </div>
+                        <div class="blog-section">
+                            <img src="./images/BMW.jpg" id='image1' alt="BMW CAR">
+                            <h2 class="topic">Marketing</h2>
+                            <div class="metadata"><h4 class="date">5th March 2022</h4></div>
+                            <p class="blog-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Consectetur voluptas corrupti incidunt, atque quo aliquid repellendus est 
+                                saepe error esse laborum, ipsa cumque, quasi fugiat? Consequatur voluptas maxime 
+                                laboriosam, totam nulla dolorum corrupti non quia vitae quae, cumque, architecto deleniti. 
+                                Maiores recusandae sit unde impedit eos accusamus. Aspernatur assumenda libero necessitatibus 
+                                neque nostrum qui architecto unde ipsa tempore pariatur fugit eum voluptatem cum porro nemo fugiat 
+                                aut quae, in deleniti odit perspiciatis atque ullam. Nemo culpa ratione tenetur temporibus iusto? 
+                                Reprehenderit explicabo, omnis suscipit culpa soluta expedita qui unde adipisci nemo temporibus magni 
+                                quas quidem nesciunt provident, commodi iste magnam!</p>
+                                <div class="formatPOST">
+                                    <a href="article.html" target="_blank""><div class="read-more">READ MORE</div></a>
+                                </div>
+                        </div>
+                        <div class="blog-section">
+                            <img src="./images/BMW.jpg" id='image1' alt="BMW CAR">
+                            <h2 class="topic">Marketing</h2>
+                            <div class="metadata"><h4 class="date">5th March 2022</h4></div>
+                            <p class="blog-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Consectetur voluptas corrupti incidunt, atque quo aliquid repellendus est 
+                                saepe error esse laborum, ipsa cumque, quasi fugiat? Consequatur voluptas maxime 
+                                laboriosam, totam nulla dolorum corrupti non quia vitae quae, cumque, architecto deleniti. 
+                                Maiores recusandae sit unde impedit eos accusamus. Aspernatur assumenda libero necessitatibus 
+                                neque nostrum qui architecto unde ipsa tempore pariatur fugit eum voluptatem cum porro nemo fugiat 
+                                aut quae, in deleniti odit perspiciatis atque ullam. Nemo culpa ratione tenetur temporibus iusto? 
+                                Reprehenderit explicabo, omnis suscipit culpa soluta expedita qui unde adipisci nemo temporibus magni 
+                                quas quidem nesciunt provident, commodi iste magnam!</p>
+                                <div class="formatPOST">
+                                    <a href="article.html" target="_blank""><div class="read-more">READ MORE</div></a>
+                                </div>
+                        </div>
+
+                        <div class="blog-section">
+                            <img src="./images/BMW.jpg" id='image1' alt="BMW CAR">
+                            <h2 class="topic">Marketing</h2>
+                            <div class="metadata"><h4 class="date">5th March 2022</h4></div>
+                            <p class="blog-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Consectetur voluptas corrupti incidunt, atque quo aliquid repellendus est 
+                                saepe error esse laborum, ipsa cumque, quasi fugiat? Consequatur voluptas maxime 
+                                laboriosam, totam nulla dolorum corrupti non quia vitae quae, cumque, architecto deleniti. 
+                                Maiores recusandae sit unde impedit eos accusamus. Aspernatur assumenda libero necessitatibus 
+                                neque nostrum qui architecto unde ipsa tempore pariatur fugit eum voluptatem cum porro nemo fugiat 
+                                aut quae, in deleniti odit perspiciatis atque ullam. Nemo culpa ratione tenetur temporibus iusto? 
+                                Reprehenderit explicabo, omnis suscipit culpa soluta expedita qui unde adipisci nemo temporibus magni 
+                                quas quidem nesciunt provident, commodi iste magnam!</p>
+                                <div class="formatPOST">
+                                    <a href="article.html" target="_blank""><div class="read-more">READ MORE</div></a>
+                                </div>
+                        </div>
+                    
                     </div>
+
+                        
+                    
+                    <div class="page-count">
+                        <div class="pages">1</div>
+                        <div class="pages">2</div>
+                        <div class="pages">3</div>
+                        <div class="pages">4</div>
+                        <div class="pages">5</div>
+                    </div>
+                </section>
+                
+                    <footer>
+
+                    </footer>
+
+             
             </div>
 
-            <div class="blog-section">
-                <img src="./images/BMW.jpg" id='image1' alt="BMW CAR">
-                <h2 class="topic">Marketing</h2>
-                <div class="metadata"><h4 class="date">5th March 2022</h4></div>
-                <p class="blog-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Consectetur voluptas corrupti incidunt, atque quo aliquid repellendus est 
-                    saepe error esse laborum, ipsa cumque, quasi fugiat? Consequatur voluptas maxime 
-                    laboriosam, totam nulla dolorum corrupti non quia vitae quae, cumque, architecto deleniti. 
-                    Maiores recusandae sit unde impedit eos accusamus. Aspernatur assumenda libero necessitatibus 
-                    neque nostrum qui architecto unde ipsa tempore pariatur fugit eum voluptatem cum porro nemo fugiat 
-                    aut quae, in deleniti odit perspiciatis atque ullam. Nemo culpa ratione tenetur temporibus iusto? 
-                    Reprehenderit explicabo, omnis suscipit culpa soluta expedita qui unde adipisci nemo temporibus magni 
-                    quas quidem nesciunt provident, commodi iste magnam!</p>
-                    <div class="formatPOST">
-                        <a href="article.html" target="_blank""><div class="read-more">READ MORE</div></a>
+
+
+            <div id="admin-section">
+                <header>
+                    <div class="logo">MS</div>
+                    <div class="nav-bar">
+                        <a href="#">Home</a>
+                        <a href="#">About</a>
+                        <a href="#">Resources</a>
+                        <a href="https://mfonisoukpabio.vercel.app/">Portfolio</a>
                     </div>
-            </div>
-           
+                    
+                    <div class="cornerBar">
+                            <span class="material-icons-outlined" id="search-btn" title="Search">search</span>
+                            <div class="searchBar">
+                                <input type="text" placeholder="Search Blog...">
+                                <span class="material-icons-outlined" id="search-btn-real" title="Search">search</span>
+                            </div>
+                        <span class="material-icons-outlined" id="menu-bar" title="Menu">menu</span>
+                        <span class="material-icons-outlined" id="close-bar" title="Search">close</span>
+                        <span class="material-icons-outlined" id="addPost-bar" title="Add Post">post_add</span>
+                        <span class="material-icons-outlined" id="adminLogout" title="Admin Logout">logout</span>
+                    </div>
+                        
+                </header>
+                <section class="blog-page">
+                    <h1 class="title">Educational Articles for your consumption</h1>
+                    <p class="addiTitle">Read about new ideas concerning school, school resumption, etc</p>
+                    
+                    <div class="blog-skin">
+                        <div class="blog-section">
+                            <img src="./images/BMW.jpg" id='image1' alt="BMW CAR">
+                            <h2 class="topic">Marketing</h2>
+                            <div class="metadata"><h4 class="date">5th March 2022</h4></div>
+                            <p class="blog-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Consectetur voluptas corrupti incidunt, atque quo aliquid repellendus est 
+                                saepe error esse laborum, ipsa cumque, quasi fugiat? Consequatur voluptas maxime 
+                                laboriosam, totam nulla dolorum corrupti non quia vitae quae, cumque, architecto deleniti. 
+                                Maiores recusandae sit unde impedit eos accusamus. Aspernatur assumenda libero necessitatibus 
+                                neque nostrum qui architecto unde </p>
+                            <div class="formatPOST">
+                                <a href="article.html" target="_blank""><div class="read-more">READ MORE</div></a>
+                                <div class="editPost">EDIT POST</div>
+                                <div class="deletePost">DELETE POST</div>
+                            </div>
+                        </div>
+
+                        <form class="editSection">
+                            <span class="material-icons-outlined" id="close-editSection" title="Close">close</span>
+                            <div class="inputTopic"> 
+                                <label for="">Add Topic:</label>
+                                <input type="text" id="inputTopic">
+                            </div>
+                            <div class="inputImage">
+                                <label for="image">Input Image:</label>
+                                <input type="file" id="inputImage" accept=".png, .jpg" capture="" value="src" />
+
+                            </div>
+                            <div class="inputText">
+                                <label for="">Add Text:</label>
+                                <textarea name="" id="inputText"></textarea>
+                            </div>
+
+                            <button id="submitNewPostBtn">SUBMIT</button>
+                        </form>
+                        <div class="blog-section">
+                            <img src="./images/BMW.jpg" id='image1' alt="BMW CAR">
+                            <h2 class="topic">Marketing</h2>
+                            <div class="metadata"><h4 class="date">5th March 2022</h4></div>
+                            <p class="blog-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Consectetur voluptas corrupti incidunt, atque quo aliquid repellendus est 
+                                saepe error esse laborum, ipsa cumque, quasi fugiat? Consequatur voluptas maxime 
+                                laboriosam, totam nulla dolorum corrupti non quia vitae quae, cumque, architecto deleniti. 
+                                Maiores recusandae sit unde impedit eos accusamus. Aspernatur assumenda libero necessitatibus 
+                                neque nostrum qui architecto unde </p>
+                            <div class="formatPOST">
+                                <a href="article.html" target="_blank""><div class="read-more">READ MORE</div></a>
+                                <div class="editPost">EDIT POST</div>
+                                <div class="deletePost">DELETE POST</div>
+                            </div>
+                        </div>
+                        <div class="blog-section">
+                            <img src="./images/BMW.jpg" id='image1' alt="BMW CAR">
+                            <h2 class="topic">Marketing</h2>
+                            <div class="metadata"><h4 class="date">5th March 2022</h4></div>
+                            <p class="blog-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Consectetur voluptas corrupti incidunt, atque quo aliquid repellendus est 
+                                saepe error esse laborum, ipsa cumque, quasi fugiat? Consequatur voluptas maxime 
+                                laboriosam, totam nulla dolorum corrupti non quia vitae quae, cumque, architecto deleniti. 
+                                Maiores recusandae sit unde impedit eos accusamus. Aspernatur assumenda libero necessitatibus 
+                                neque nostrum qui architecto unde </p>
+                            <div class="formatPOST">
+                                <a href="article.html" target="_blank""><div class="read-more">READ MORE</div></a>
+                                <div class="editPost">EDIT POST</div>
+                                <div class="deletePost">DELETE POST</div>
+                            </div>
+                        </div>
+                        <div class="blog-section">
+                            <img src="./images/BMW.jpg" id='image1' alt="BMW CAR">
+                            <h2 class="topic">Marketing</h2>
+                            <div class="metadata"><h4 class="date">5th March 2022</h4></div>
+                            <p class="blog-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Consectetur voluptas corrupti incidunt, atque quo aliquid repellendus est 
+                                saepe error esse laborum, ipsa cumque, quasi fugiat? Consequatur voluptas maxime 
+                                laboriosam, totam nulla dolorum corrupti non quia vitae quae, cumque, architecto deleniti. 
+                                Maiores recusandae sit unde impedit eos accusamus. Aspernatur assumenda libero necessitatibus 
+                                neque nostrum qui architecto unde </p>
+                            <div class="formatPOST">
+                                <a href="article.html" target="_blank""><div class="read-more">READ MORE</div></a>
+                                <div class="editPost">EDIT POST</div>
+                                <div class="deletePost">DELETE POST</div>
+                            </div>
+                        </div>
+                    
+
+                        
+                    </div>
+                    
+                    <div class="page-count">
+                        <div class="pages">1</div>
+                        <div class="pages">2</div>
+                        <div class="pages">3</div>
+                        <div class="pages">4</div>
+                        <div class="pages">5</div>
+                    </div>
+                    
+                </section>
+                <footer>
+
+                </footer>
             </div>
 
-            
-        </div>
-        
-        <div class="page-count">
-            <div class="pages">1</div>
-            <div class="pages">2</div>
-            <div class="pages">3</div>
-            <div class="pages">4</div>
-            <div class="pages">5</div>
-        </div>
-        
-    </section>
-    <footer>
 
-    </footer>
-    <script src="script.js"></script>
-</body>
+
+            <div id="article-section">
+                <header>
+                    <div class="logo">MS</div>
+                    <div class="nav-bar">
+                        <a href="#">Home</a>
+                        <a href="#">About</a>
+                        <a href="#">Resources</a>
+                        <a href="https://mfonisoukpabio.vercel.app/">Portfolio</a>
+                    </div>
+                    
+                    <div class="cornerBar">
+                            <span class="material-icons-outlined" id="search-btn">search</span>
+                            <div class="searchBar">
+                                <input type="text" placeholder="Search Blog...">
+                                <span class="material-icons-outlined" id="search-btn-real">search</span>
+                            </div>
+                        <span class="material-icons-outlined" id="menu-bar">menu</span>
+                        <span class="material-icons-outlined" id="close-bar">close</span>
+                        <span id="adminLogin"class="material-icons-outlined" title="Admin Login">login</span>
+                        <!-- <div class="connect-buttons">
+
+                        </div> -->
+                        <!-- <button>GET STARTED</button> -->
+                    </div>
+                        
+                </header>
+
+                <!-- POST CONTENT -->
+                <section class="article-main">
+                        <div class="category">Marketing</div>
+                        <h2 class="article-topic">Marketing Proper within a given period </h2>
+                        <div class="meta-section"><div class="material-icons-round">person</div>John Winifred <div class="material-icons-outlined">schedule</div>12th March, 2025<div class="material-icons-outlined">question_answer</div>21</div>
+                        <img src="./images/BMW.jpg" id='image1' alt="BMW CAR">
+                        <div class="article-body">
+                            <p><span>Lorem</span> ipsum dolor sit amet consectetur adipisicing elit. 
+                                Consectetur voluptas corrupti incidunt, atque quo aliquid repellendus est 
+                                saepe error esse laborum, ipsa cumque, quasi fugiat? Consequatur voluptas maxime 
+                                <i>laboriosam, totam nulla dolorum corrupti non quia vitae quae, cumque, architecto deleniti. 
+                                    Maiores recusandae sit unde impedit eos accusamus. Aspernatur assumenda libero necessitatibus 
+                                    neque nostrum qui architecto unde ipsa tempore pariatur fugit eum voluptatem cum porro nemo fugiat 
+                                    aut quae, in deleniti odit perspiciatis atque ullam. Nemo culpa ratione tenetur temporibus iusto? 
+                                    Reprehenderit explicabo, omnis suscipit </i> culpa soluta expedita qui unde adipisci nemo temporibus magni 
+                                quas quidem nesciunt provident, commodi iste magnam</p>
+                            <p><span>Lorem</span> ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Consectetur voluptas corrupti incidunt, atque quo aliquid repellendus est 
+                                    saepe error esse laborum, ipsa cumque, quasi fugiat? Consequatur voluptas maxime 
+                                    laboriosam, totam nulla dolorum corrupti non quia vitae quae, cumque, architecto deleniti. 
+                                    Maiores recusandae sit unde impedit eos accusamus. Aspernatur assumenda libero necessitatibus 
+                                    neque nostrum qui architecto unde ipsa tempore pariatur fugit eum voluptatem cum porro nemo fugiat 
+                                    aut quae, in deleniti odit perspiciatis atque ullam. Nemo culpa ratione tenetur temporibus iusto? 
+                                    Reprehenderit explicabo, omnis suscipit culpa soluta expedita qui unde adipisci nemo temporibus magni 
+                                    quas quidem nesciunt provident, commodi iste magnam</p>
+                            <p><span>Lorem</span> ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Consectetur voluptas corrupti incidunt, atque quo aliquid repellendus est 
+                                        saepe error esse laborum, ipsa cumque, quasi fugiat? Consequatur voluptas maxime 
+                                        laboriosam, totam nulla dolorum corrupti non quia vitae quae, cumque, architecto deleniti. 
+                                        Maiores recusandae sit unde impedit eos accusamus. Aspernatur assumenda libero necessitatibus 
+                                        neque nostrum qui architecto unde ipsa tempore pariatur fugit eum voluptatem cum porro nemo fugiat 
+                                        aut quae, in deleniti odit perspiciatis atque ullam. Nemo culpa ratione tenetur temporibus iusto? 
+                                        Reprehenderit explicabo, omnis suscipit culpa soluta expedita qui unde adipisci nemo temporibus magni 
+                                        quas quidem nesciunt provident, commodi iste magnam</p>
+
+                            <div class="author">
+                                <img src="./images/profile.jpg" alt="Image of Author">
+                                <div class="about-author">
+                                    <h3>John Winifred</h3>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, cumque? adipisicing elit. Qui, cumque </p>
+                                    <div class="author-id">
+                                        <a href="#"><div class="material-icons-outlined">facebook</div></a>
+                                        <a href="#"><div class="material-icons-outlined">whatsapp</div></a>
+                                        <a href="#"><div class="material-icons-outlined">call</div></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    <!-- POST CONTENT -->
+
+                    <!-- PREVIOUS POST SECTION -->
+                        <div class="posts-count">
+                            <div class="previous-next">
+                                <a href="#"><div> < Previous Post </div></a>
+                                <a href="#"><div> Next Post > </div></a>
+                            </div>
+                            <div class="previous-next-topic">
+                                <a href="#"><div class="previous-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis atque?</div></a>
+                                <a href="#"><div class="next-post">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div></a>
+                            </div>
+                        </div>
+                        <!-- PREVIOUS POST SECTION -->
+
+
+                        <!-- COMMENT SECTION -->
+                        <div class="comment-section">
+                            <h3>Leave a comment</h3>
+                            <div class="comment-and-reply">
+                                <div id="commentBoxforReaction">
+                                    <div class="comments-section-real">
+                                        <div class="userName">MFONISO</div>
+                                        <div class="comment-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                            Aliquam, molestiae voluptate. Quas odio inventore repudiandae corporis autem pariatur debitis dolore?
+                                        </div>
+                                    </div>
+                                    <div class="reactions">Like edit reply</div>
+                                </div>
+                                
+                                <!-- <div id="commentBoxforReaction">
+                                    <div class="reply">
+                                        <div class ="userNameComment"> Samuel </div>
+                                        <div class="reply-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                            Aliquam, molestiae voluptate. Quas odio inventore repudiandae corporis autem pariatur debitis dolore?
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="comment-and-reply">
+                                <div id="commentBoxforReaction">
+                                    <div class="comments-section-real">
+                                        <div class="userName">MFONISO</div>
+                                        <div class="comment-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                            Aliquam, molestiae voluptate. Quas odio inventore repudiandae corporis autem pariatur debitis dolore?
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="dropcommentSection">
+
+                                <h3>ADD COMMENT</h3>
+                                
+                                <div class="drop-comment">
+                                    <label for="userNameComment">Input Name:</label>
+                                    <input type="text"  id='userNameComment' placeholder="Type name..." required>
+                                </div>
+
+                                <textarea name="addComment" id="addComment"></textarea>
+                            
+                                <button id="submit-comment" >SUBMIT COMMENT</button>
+                            
+                        </div>
+                    <!-- COMMENT SECTION -->
+                    
+                    
+                </section>
+                <footer>
+
+                </footer>
+            </div>
+
+     <script src="script.js"></script>
+    </body>
 </html>
