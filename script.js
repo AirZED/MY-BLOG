@@ -1,3 +1,51 @@
+/*
+
+GOALS
+THIS IS MY ALGORITHM FOR THIS BLOG
+// 1.  MAKE THE SIMPLE FUNCTIONALITIES WORK
+// 2.  USE LOOP THE DISPLAY THE AMOUNT OF DATA I DESIRE
+// 3.  USE MAP TO SPREAD THE ARRAY
+3b. Handle SUBMIT POST
+4.  CHANGE THE OLD SYNTAX TO ES6
+5.  ACHEIVE DRY - DONT REPREAT YOURSELF
+6. Consume API data
+
+
+
+SO HELP ME GOD
+*/
+
+const dataToBeConsumed= [{
+    userId: 1,
+    id: 1,
+    title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+  },
+  {
+    userId: 1,
+    id: 2,
+    title: "qui est esse",
+    body: "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla",
+  },
+  {
+    userId: 1,
+    id: 3,
+    title: "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+    body: "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut",
+  },
+  {
+    userId: 1,
+    id: 4,
+    title: "eum et est occaecati",
+    body: "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit",
+  },
+  {
+    userId: 1,
+    id: 5,
+    title: "nesciunt quas odio",
+    body: "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque",
+  },
+];
 const menuBar = document.querySelector("#menu-bar");
 const closeBar = document.querySelector("#close-bar");
 
@@ -60,12 +108,70 @@ function removeEditTab() {
   editSection.classList.remove("active");
 }
 
+
+//CONSUMING API
+//Loop to consume API
+for (let i = 0; i > 10; i++){
+
+}
+
+
+//Displaing Data
+const dataPack = dataToBeConsumed.map(
+  (eachData) => ` <div class="blog-section">
+                    <img src="./images/BMW.jpg" id='image1' alt="BMW CAR">
+                    <h2 class="topic">${eachData.title}</h2>
+                    <div class="metadata">
+                        <h4 class="date">5th March 2022</h4>
+                    </div>
+                    <p class="blog-post">${eachData.body}</p>
+                    <div class="formatPOST">
+                        <div class="read-more">READ MORE</div>
+                        <div class="editPost">EDIT POST</div>
+                        <div class="deletePost">DELETE POST</div>
+                    </div>
+                </div>`
+).join('');
+
+let id = dataPack.map(eachid => { eachid.id });
+console.log(id)
+let blogSkin = document.querySelector(".blog-skin");
+blogSkin.innerHTML = dataPack;
+
+
+
+
+/*
+
+
+
+console.log(data);
+
+let multiplied = data.map((dataValues) => {
+  `
+               <div>
+                    <img src="./images/BMW.jpg" id='image1' alt="BMW CAR">
+                    <h2 class="topic">${dataValues.title}}</h2>
+                    <div class="metadata">
+                        <h4 class="date">5th March 2022</h4>
+                    </div>
+                    <p class="blog-post">${dataValues.body} </p>
+                    <div class="formatPOST">
+                        <div class="read-more">READ MORE</div>
+                        <div class="editPost">EDIT POST</div>
+                        <div class="deletePost">DELETE POST</div>
+                    </div>
+                </div>`;
+}).join(``);
+
 // WRITE NEW POST
 
 const inputImage = document.querySelector("#inputImage");
 const inputText = document.querySelector("#inputText");
 
 const blogSkin = document.querySelector(".blog-skin");
+blogSkin.innerHTML = multiplied;
+
 const formatPOST = document.querySelector(".formatPOST");
 
 const submitNewPostBtn = document.querySelector("#submitNewPostBtn");
@@ -121,7 +227,6 @@ function submitNewPost(e) {
     newTopic.appendChild(document.createTextNode(inputTopic.value));
 
     newBlogSection.append(newBlogPost);
-    console.log(formatPOST);
 
     newBlogSection.appendChild(formatPOST);
 
@@ -243,7 +348,6 @@ function tooglePages() {
   var adminSection = document.getElementById("admin-section");
   var articleSection = document.getElementById("article-section");
   // pages
-  console.log(indexSection.parentNode)
 
   // pages buttons
   var adminLogin = document.querySelector("#adminLogin");
@@ -251,13 +355,16 @@ function tooglePages() {
   // pages buttons
 
   adminLogin.addEventListener("click", (e) => {
-     e.preventDefault();
-    indexSection.parentElement.replaceChild(adminSection, indexSection);
-    adminSection.classList.add(".active");
-    articleSection.classList.remove('.active');
-    
+    e.preventDefault();
+    indexSection.classList.add("inactive");
+    adminSection.classList.add("inactive");
   });
 
-  adminLogout.addEventListener("click", () => {});
+  adminLogout.addEventListener("click", (e) => {
+    e.preventDefault();
+    indexSection.classList.remove("inactive");
+    adminSection.classList.remove("inactive");
+  });
 }
 tooglePages();
+*/

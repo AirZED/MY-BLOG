@@ -55,11 +55,10 @@ header {
 }
 /* INDEX SECTION */
 #index-section {
-  
+  display: block;
 }
-
-#index-section.active {
-
+#index-section.inactive {
+  display: none;
 }
 /* INDEX SECTION */
 
@@ -67,8 +66,8 @@ header {
 #admin-section {
   display: none;
 }
-#admin-section.active {
- display: block;
+#admin-section.inactive {
+  display: block;
 }
 /* ADMIN SECTION */
 
@@ -76,13 +75,10 @@ header {
 #article-section {
   display: none;
 }
-
-#article-section.active {
-  display: none;
+#article-section.inactive {
+  display: block;
 }
 /* ARTICLE SECTION */
-
-
 
 header .logo {
   font-size: 4rem;
